@@ -4,7 +4,7 @@ import com.vkumar.userservice.entities.User;
 import com.vkumar.userservice.exceptions.OperationFailedException;
 import com.vkumar.userservice.exceptions.ResourceNotFoundException;
 import com.vkumar.userservice.models.UserRequest;
-import com.vkumar.userservice.models.response.UserDataResponse;
+import com.vkumar.userservice.models.responses.UserDataResponse;
 import com.vkumar.userservice.repositories.UserRepository;
 import com.vkumar.userservice.services.UserService;
 import org.springframework.beans.BeanUtils;

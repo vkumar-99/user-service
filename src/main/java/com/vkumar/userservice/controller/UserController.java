@@ -1,7 +1,7 @@
 package com.vkumar.userservice.controller;
 
 import com.vkumar.userservice.models.UserRequest;
-import com.vkumar.userservice.models.response.UserDataResponse;
+import com.vkumar.userservice.models.responses.UserDataResponse;
 import com.vkumar.userservice.services.UserService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

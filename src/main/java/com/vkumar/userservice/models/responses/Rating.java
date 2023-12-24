@@ -1,4 +1,4 @@
-package com.vkumar.userservice.models.response;
+package com.vkumar.userservice.models.responses;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

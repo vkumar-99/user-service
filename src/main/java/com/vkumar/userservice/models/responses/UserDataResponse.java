@@ -1,5 +1,6 @@
-package com.vkumar.userservice.models.response;
+package com.vkumar.userservice.models.responses;
 
+import com.vkumar.userservice.models.responses.Rating;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

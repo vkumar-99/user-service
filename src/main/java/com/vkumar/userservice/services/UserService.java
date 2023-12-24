@@ -1,7 +1,7 @@
 package com.vkumar.userservice.services;
 
 import com.vkumar.userservice.models.UserRequest;
-import com.vkumar.userservice.models.response.UserDataResponse;
+import com.vkumar.userservice.models.responses.UserDataResponse;
 
 import java.util.List;
 

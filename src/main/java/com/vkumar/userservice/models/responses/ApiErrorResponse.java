@@ -1,4 +1,4 @@
-package com.vkumar.userservice.responses;
+package com.vkumar.userservice.models.responses;
 
 import lombok.*;
 import org.springframework.http.HttpStatus;
