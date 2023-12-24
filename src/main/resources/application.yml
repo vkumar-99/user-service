@@ -1,12 +1,15 @@
 server:
   port: 8081
+  error:
+    include-message: always
 
 spring:
   datasource:
-    url:
-    username:
-    password:
+    url: jdbc:postgresql://localhost:5432/user_db
+    username: ps_user
+    password: B1ank
   jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: update
     show-sql: true

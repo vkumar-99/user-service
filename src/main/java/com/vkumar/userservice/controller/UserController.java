@@ -1,7 +1,9 @@
 package com.vkumar.userservice.controller;
 
-import com.vkumar.userservice.models.UserData;
+import com.vkumar.userservice.models.UserRequest;
+import com.vkumar.userservice.models.response.UserDataResponse;
 import com.vkumar.userservice.services.UserService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,18 +19,18 @@ public class UserController {
     private UserService userService;
 
     @PostMapping
-    public ResponseEntity<UserData> createUser(@RequestBody UserData data) {
-        UserData result = userService.addUser(data);
+    public ResponseEntity<UserDataResponse> createUser(@Valid @RequestBody UserRequest data) {
+        UserDataResponse result = userService.addUser(data);
         return ResponseEntity.status(HttpStatus.CREATED).body(result);
     }
 
     @GetMapping
-    public ResponseEntity<List<UserData>> getAllUsers() {
+    public ResponseEntity<List<UserDataResponse>> getAllUsers() {
         return ResponseEntity.ok(userService.getAlluser());
     }
 
     @GetMapping("/{userId}")
-    public ResponseEntity<UserData> getUser(@PathVariable("userId") String userId) {
+    public ResponseEntity<UserDataResponse> getUser(@PathVariable("userId") String userId) {
         return ResponseEntity.ok(userService.getUser(userId));
     }
 }

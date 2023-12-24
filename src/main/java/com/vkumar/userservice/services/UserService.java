@@ -1,14 +1,15 @@
 package com.vkumar.userservice.services;
 
-import com.vkumar.userservice.models.UserData;
+import com.vkumar.userservice.models.UserRequest;
+import com.vkumar.userservice.models.response.UserDataResponse;
 
 import java.util.List;
 
 public interface UserService {
 
-    UserData addUser(UserData user);
+    UserDataResponse addUser(UserRequest user);
 
-    UserData getUser(String userId);
+    UserDataResponse getUser(String userId);
 
-    List<UserData> getAlluser();
+    List<UserDataResponse> getAlluser();
 }
