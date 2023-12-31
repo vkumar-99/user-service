@@ -12,4 +12,6 @@ public interface UserService {
     UserDataResponse getUser(String userId);
 
     List<UserDataResponse> getAlluser();
+
+    void cleanDb();
 }

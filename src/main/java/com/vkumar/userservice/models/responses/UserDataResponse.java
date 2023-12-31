@@ -13,6 +13,8 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class UserDataResponse {
+
+    private String userId;
     private String userName;
     private String email;
     private String about;

@@ -44,6 +44,11 @@ public class UserServiceImpl implements UserService {
                 .toList();
     }
 
+    @Override
+    public void cleanDb() {
+        userRepository.deleteAll();
+    }
+
     private User convertToEntity(UserRequest userData) {
         User userEntity = new User();
         BeanUtils.copyProperties(userData, userEntity);
@@ -51,7 +56,8 @@ public class UserServiceImpl implements UserService {
     }
 
     private UserDataResponse convertToRecord(User userEntity) {
-        return new UserDataResponse(userEntity.getName(),
+        return new UserDataResponse(userEntity.getUserId(),
+                userEntity.getName(),
                 userEntity.getEmail(),
                 userEntity.getAbout(),
                 Collections.emptyList());

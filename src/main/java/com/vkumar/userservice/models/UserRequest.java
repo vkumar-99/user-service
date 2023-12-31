@@ -8,11 +8,9 @@ import lombok.Data;
 public class UserRequest {
 
     @NotBlank(message = "Name cannot be empty")
-    @Min(3)
     private String name;
     @Email(message = "Invalid email address")
     private String email;
     @NotBlank(message = "About cannot be empty")
-    @Min(3)
     private String about;
 }

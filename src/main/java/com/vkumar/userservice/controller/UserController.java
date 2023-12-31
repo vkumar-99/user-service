@@ -33,4 +33,10 @@ public class UserController {
     public ResponseEntity<UserDataResponse> getUser(@PathVariable("userId") String userId) {
         return ResponseEntity.ok(userService.getUser(userId));
     }
+
+    @DeleteMapping
+    public ResponseEntity<String> cleanDb() {
+        userService.cleanDb();
+        return ResponseEntity.ok("Db Cleaned");
+    }
 }
